@@ -15,4 +15,8 @@ mongoose
 
 db.on('error', console.error.bind(console, 'connection error:'));
 
+db.on('connected', () => {
+  console.log('MongoDB connection open');
+});
+
 export default db;
